@@ -2,8 +2,7 @@ import React from 'react'
 import { toast } from 'react-toastify';
 
 const Contact = () => {
-    const [result, setResult] = React.useState("");
-
+ const [result, setResult] = React.useState("");
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
@@ -16,9 +15,8 @@ const Contact = () => {
       body: formData
     });
   
-
     const data = await response.json();
-   console.log(data)
+    console.log(data)
 
     if (data.success) {
       toast.success("Form Submitted Successfully")
